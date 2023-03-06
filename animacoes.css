@@ -1,0 +1,61 @@
+/****** CSS ANIMAÇÕES ******/
+
+/* identifica a criação de animações */
+@keyframes animacao-caixa { /* nome dado à animação */
+	/* estado incial da animação */
+	from {
+		background: red;
+		border-radius: 0px;
+		top: 0;
+		left: 0;
+	}
+	/* estado final da animação */
+	to {
+		background: yellow;
+		border-radius: 300px;
+		top: 200px;
+		left: 200px;
+	}
+}
+
+@keyframes animacao-texto { /* nome dado à animação */
+	/* estado incial da animação */
+	from {
+		color: yellow;
+	}
+	/* estado final da animação */
+	to {
+		color: red;
+	}
+}
+
+#caixa {
+	width: 300px;
+	height: 300px;
+	background: red;
+	position: relative;
+	/* permite aplicar animações criadas colocando o nome dado a animação */
+	animation-name: animacao-caixa; /* nome da animação */
+	/* duração da animação */
+	animation-duration: 5s;
+	/* tempo de espera da animação */
+	animation-delay: 1s;
+	/* definir quantas vezes à animação será executada */
+	animation-iteration-count: 2;
+	/* alterna a direção dá à animação */
+	animation-direction: alternate;
+
+	/* utilizando apenas à propriedade principal colocando a sequencia de animação */
+	/* animação em apenas uma linha */
+	animation: animacao-caixa 5s 1s 2 alternate;
+
+} 
+
+h1 {
+	position: absolute;
+	left: 0;
+	top: 35%;
+	width: 100%;
+	text-align: center;
+	animation: animacao-texto 5s 1s 2 alternate;
+}

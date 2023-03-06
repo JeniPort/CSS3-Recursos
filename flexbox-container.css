@@ -1,0 +1,73 @@
+/****** CSS FLEXBOX CONTAINER ******/
+
+/* apenas para leitura de fácil compreensão (ID não aplicado) */
+#conteudo- {
+	background: #dcdcdc;
+	height: 600px;
+	/* itens flexíveis */
+	display: flex;
+	/* define direções dos elementos com display: flex; aplicados */
+	flex-direction: row; /* row | row-reverse | column | column-reverse */
+	/* define quebras de layouts com display: flex; aplicados */
+	flex-wrap: nowrap; /* nowrap | wrap | wrap-reverse */
+	/* define como o navegador distribui elementos */
+	justify-content: space-around; /* flex-start | flex-end | center | space-between | space-around */
+	/* controla alinhamento dos itens */
+	align-items: baseline; /* stretch | center | flex-start | flex-end | baseline */
+}
+
+/* ID aplicado */
+#conteudo {
+	background: #dcdcdc;
+	height: 600px;
+	/* itens flexíveis */
+	display: flex;
+}
+
+.item {
+	/* width: 200px; */
+	height: 100px;
+	margin: 10px;
+	background: white;
+	border: 1px solid gray;
+	/* define à proporção que o item vai crescer  */
+	flex-grow: 0;
+	/* define à capacidade de redução de tamanho do item */
+	flex-shrink: 1;
+	/* indica tamanho inicial antes da distribuição do espaço restante */
+	flex-basis: 100px;
+}
+
+/** exemplos **/
+.item1 {
+	/* flex-grow: 1; */
+	/* flex-shrink: 1; */
+}
+
+.item2 {
+	flex-grow: 1;
+	/* flex-shrink: 2; */
+}
+
+.item3 {
+	flex-grow: 2;
+	/* flex-shrink: 5; */
+}
+
+.ordem1 {
+	/* permite alterar ordem de elementos */
+	/* define ordem para colocar um item em um container */
+	order: 1;
+}
+
+.ordem2 {
+	order: 2;
+}
+
+.ordem3 {
+	order: 3;
+}
+
+.ordem4 {
+	order: 4;
+}
